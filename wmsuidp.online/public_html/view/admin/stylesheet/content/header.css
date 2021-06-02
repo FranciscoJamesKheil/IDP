@@ -1,0 +1,516 @@
+@import url('http://fonts.cdnfonts.com/css/tw-cen-mt');
+@font-face {
+    font-family: 'Tw';
+    src: url('../../../font/tw/TCB_____.TTF');
+    src: url('../../../font/tw/TCM_____.TTF');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Tw Cen MT", TW, sans-serif;
+  width: 100%;
+  background: rgb(246, 247, 251);
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(128, 128, 128);
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(95, 95, 95);
+}
+.logo p {
+  font-size: 8px;
+  margin-left: 42px;
+}
+a {
+  color: rgb(75, 75, 75);
+}
+.active,
+.active p {
+  background: rgb(236, 236, 236);
+}
+.active-link {
+  color: rgb(75, 75, 75);
+  background: rgb(130, 0, 0);
+}
+.header {
+  line-height: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px -2px rgb(54, 54, 54);
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  top: 0;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+
+.header ul a {
+  display: block;
+  padding: 15px 20px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.header ul li:hover {
+  transition: all 0.3s ease;
+}
+.header .logo {
+  float: left;
+  display: block;
+  font-size: 1.5em;
+  padding: 8px 20px;
+  letter-spacing: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.logo-text {
+  margin: 10px 0 0 0;
+  color: rgb(160, 0, 30);
+  font-size: 24px;
+}
+.logo-text p {
+  font-size: 8px;
+}
+.img-logo {
+  margin: 5px 5px 0px 0px;
+  width: 35px;
+  float: left;
+}
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.header .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: rgb(75, 75, 75);
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+.header .menu-icon .nav-icon:before {
+  background: rgb(75, 75, 75);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 5px;
+  transition: all 0.2s ease-out;
+}
+.header .menu-icon .nav-icon:after {
+  background: rgb(75, 75, 75);
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -5px;
+  transition: all 0.2s ease-out;
+}
+.menu i {
+  color: rgb(218, 218, 218);
+}
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 600px;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+li .dropdown-nav {
+  display: block;
+  padding: 5px 0px;
+  font-size: 14px;
+  color: rgb(75, 75, 75);
+  text-decoration: none;
+}
+.dropdown-content-nav a:hover {
+  background: rgb(236, 236, 236);
+}
+.nav-title {
+  display: none;
+}
+.dropdown-nav hr {
+  display: none;
+}
+.bdr-top-line {
+  border-top: 1px solid rgb(218, 218, 218);
+}
+@media (min-width: 769px) {
+  main {
+    font-size: default; /*for php font size*/
+  }
+  .header {
+    width: 85%;
+    right: 0;
+  }
+  .header li {
+    float: left;
+  }
+  .header #dashboard-mobile {
+    display: none;
+  }
+  .header #settings-mobile {
+    display: none;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 12px 16px;
+    margin-top: 20px;
+    margin-left: -43px;
+    animation: dropX 0.3s;
+    z-index: -1;
+  }
+  li .dropdown-nav {
+    padding: 20px 27px;
+  }
+  .dropdown-content-nav {
+    display: none;
+    position: absolute;
+    min-width: 154px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    overflow: hidden;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 20px 0 0 -118px;
+    animation: dropX 0.3s;
+    z-index: -1;
+  }
+  .dropdown-content-nav p {
+    width: 2rem;
+    float: left;
+  }
+  .dropdown-content-nav a {
+    text-align: left;
+  }
+  .dropdown-content p {
+    animation: dropLink 0.3s linear;
+  }
+  /*Maintenance Settings-LINK*/
+  .dropdown-content-nav #slide-officials {
+    animation: dropLink 0.2s linear;
+  }
+  .dropdown-content-nav #slide-academic {
+    animation: dropLink 0.3s linear;
+  }
+  .dropdown-content-nav #slide-matrix {
+    animation: dropLink 0.4s linear;
+  }
+  /*Profile-LINK*/
+  .dropdown-content-nav #slide-profile {
+    animation: dropLink 0.3s linear;
+  }
+  .dropdown-content-nav #slide-sign-out {
+    animation: dropLink 0.4s linear;
+  }
+  .horizontal {
+    display: none;
+  }
+  /*
+  .dropdown:hover p,
+  .dropdown-profile:hover .fa-user-circle {
+    animation: moveIcon 0.2s linear alternate;
+  }*/
+  li:hover .dropdown-nav .fa-cog {
+    animation: urotate 0.4s linear;
+  }
+  li:hover .dropdown-nav .fa-user-circle {
+    animation: urotate 0.4s linear;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    box-shadow: 0px 3px 7px -3px rgb(54, 54, 54);
+  }
+  li:hover .dropdown-content-nav {
+    display: block;
+    box-shadow: 0px 0px 5px -2px rgb(54, 54, 54);
+  }
+  @keyframes moveIcon {
+    0% {
+      transform: rotate(60deg);
+    }
+    50% {
+      transform: rotate(-60deg);
+    }
+  }
+  @keyframes urotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes dropX {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  @keyframes dropLink {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .side-nav {
+    width: 15%;
+    background: linear-gradient(
+      to bottom,
+      rgb(120, 0, 0),
+      rgb(140, 0, 0),
+      rgb(160, 0, 0)
+    );
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+  }
+  .side-nav ul {
+    padding: 20px 0px;
+  }
+  .side-nav li {
+    list-style: none;
+    margin: 5px 0;
+    font-size: 16px;
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+  .side-nav a {
+    text-decoration: none;
+    color: rgb(215, 215, 215);
+  }
+  .side-nav #label-settings {
+    cursor: default;
+    text-align: center;
+    color: rgb(190, 190, 190);
+    background: rgb(140, 0, 0);
+    font-size: 12px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  .side-nav li:hover {
+    background: rgb(160, 0, 0);
+    color: white;
+  }
+  .side-nav li span {
+    width: 2rem;
+    text-align: center;
+    font-size: 13px;
+    display: inline-block;
+  }
+  .side-nav-logo {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-nav-logo img {
+    width: 45px;
+    margin-bottom: 5px;
+  }
+  .side-nav-logo #nav-hd {
+    font-size: 16px;
+  }
+  .side-nav-logo p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+  }
+  .active-sn {
+    background: rgb(160, 0, 0);
+    color: white;
+  }
+  .pG {
+    float: left;
+    padding: 20px;
+  }
+  .pG #page-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(160, 0, 0);
+  }
+  .header .logo {
+    display: none;
+    float: left;
+    width: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    background: rgb(150, 0, 0);
+  }
+  .header .logo-text {
+    color: white;
+  }
+  .header .menu-icon .nav-icon {
+    background: white;
+  }
+  .header .menu-icon .nav-icon::before {
+    background: white;
+  }
+  .header .menu-icon .nav-icon::after {
+    background: white;
+  }
+  .header .logo {
+    letter-spacing: 3px;
+  }
+  .active .nav-title {
+    color: rgb(75, 75, 75);
+  }
+  .pG {
+    display: none;
+  }
+  .side-nav {
+    display: none;
+  }
+  .menu p {
+    width: 2.4rem;
+  }
+  .dropdown-nav .fa-cog {
+    display: none;
+  }
+  .dropdown-nav .fa-user-circle {
+    display: none;
+  }
+  .dropdown-nav hr {
+    display: block;
+  }
+  #settings {
+    color: rgb(85, 85, 85);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    z-index: 5;
+    width: fit-content;
+  }
+  #profile {
+    color: rgb(85, 85, 85);
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: relative;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    z-index: 5;
+    width: fit-content;
+  }
+  .dropdown-content-nav p {
+    width: 2.4rem;
+  }
+  .nav-title {
+    display: inline-block;
+  }
+  .dropdown-content span {
+    display: none;
+  }
+  .active {
+    border-bottom: none;
+  }
+  .header ul li:hover {
+    border-bottom: none;
+  }
+  .header .menu-btn:checked ~ .menu li #slide-home {
+    animation: dropLink 0.25s linear;
+  }
+  .header .menu-btn:checked ~ .menu li #slide-dashboard {
+    animation: dropLink 0.3s linear;
+  }
+  .header
+    .menu-btn:checked
+    ~ .menu
+    li
+    .dropdown-content-nav
+    #slide-registration {
+    animation: dropLink 0.35s linear;
+  }
+  .header .menu-btn:checked ~ .menu li .dropdown-content-nav #slide-faculty {
+    animation: dropLink 0.4s linear;
+  }
+  .header .menu-btn:checked ~ .menu li .dropdown-content-nav #slide-matrix {
+    animation: dropLink 0.45s linear;
+  }
+  .header .menu-btn:checked ~ .menu li .dropdown-content-nav #slide-officials {
+    animation: dropLink 0.5s linear;
+  }
+  .header .menu-btn:checked ~ .menu li .dropdown-content-nav #slide-profile {
+    animation: dropLink 0.55s linear;
+  }
+  .header .menu-btn:checked ~ .menu li .dropdown-content-nav #slide-sign-out {
+    animation: dropLink 0.6s linear;
+  }
+  @keyframes dropLink {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

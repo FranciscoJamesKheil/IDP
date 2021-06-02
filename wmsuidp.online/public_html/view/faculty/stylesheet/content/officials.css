@@ -1,0 +1,113 @@
+main {
+  width: 85%;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+.main {
+  background: rgb(255, 255, 255);
+  color: rgb(140, 0, 0);
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+.main img {
+  width: 5rem;
+  margin-bottom: 10px;
+}
+.main #wmsu-vec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.off-container {
+  display: flex;
+  justify-content: space-around;
+}
+.official-member {
+  background: white;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 20px;
+  display: flex;
+  color: rgb(70, 70, 70);
+}
+.official-member-view {
+  background: white;
+  width: 100%;
+  margin: 10px 5px 0 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(70, 70, 70);
+  box-shadow: 0px 1px 7px -2px rgb(90, 90, 90);
+  letter-spacing: 1px;
+}
+.official-member-view h3 {
+  font-weight: bold;
+  color: rgb(160, 0, 0);
+}
+.official-member-view p {
+  font-size: 12px;
+}
+.official-member #icon-user,
+.official-member-view #icon-user {
+  width: 5rem;
+  height: 5rem;
+}
+.official-details {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 5rem;
+  width: 100%;
+  padding: 5px;
+  margin-top: 40px;
+  background: rgb(200, 200, 200);
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer #img-footer {
+  width: 1.5rem;
+  margin: 0 3px;
+}
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  .main #wmsu-vec {
+    font-size: 16px;
+  }
+  .official-details h3 {
+    font-size: 14px;
+  }
+  footer {
+    position: relative;
+  }
+  ::-webkit-scrollbar {
+    height: 5px;
+  }
+  .off-container {
+    flex-direction: column;
+  }
+  .official-member-view {
+    margin: 10px 0 0 0;
+  }
+}

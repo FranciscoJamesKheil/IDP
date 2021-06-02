@@ -1,0 +1,79 @@
+/*modal delete*/
+.font-container {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.657);
+  padding-top: 100px;
+}
+.font-content {
+  background-color: rgb(255, 255, 255);
+  margin: 10% 38% 2% 15%;
+  border: 1px solid #888;
+  width: 25%;
+  padding: 10px;
+  border-radius: 10px;
+  animation: appear 0.2s linear;
+  font-size: 18px;
+}
+.font-con {
+  display: flex;
+  align-items: center;
+}
+.font-con #df {
+  font-size: 16px;
+}
+.font-con #ei {
+  font-size: 18px;
+}
+.font-con #tw {
+  font-size: 20px;
+}
+.font-con input {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.college-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(228, 228, 228);
+}
+.college-button button {
+  width: 5rem;
+  padding: 5px;
+  margin: 0 5px;
+  opacity: 0.6;
+  transition: 0.3s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.college-button #cancel {
+  border: none;
+  background: rgb(0, 140, 0);
+  color: white;
+  transition: 0.3s;
+}
+.college-button #submit {
+  border: none;
+  background: rgb(255, 0, 0);
+  color: white;
+  transition: 0.3s;
+}
+.college-button button:hover {
+  opacity: 1;
+}
+@keyframes appear {
+  0% {
+    transform: translateX(-600px);
+  }
+}

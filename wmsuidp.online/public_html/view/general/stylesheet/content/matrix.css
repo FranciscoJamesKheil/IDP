@@ -1,0 +1,295 @@
+main {
+  width: 85%;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+.main {
+  background: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px 0px 5px -2px rgb(185, 185, 185);
+}
+.matrix-para {
+  padding: 10px;
+  text-align: justify;
+}
+.matrix-para h2 {
+  color: rgb(140, 0, 0);
+}
+.matrix-para ol {
+  padding: 10px 30px;
+}
+.ani {
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  filter: drop-shadow(0px 10px 5px rgb(105, 105, 105));
+}
+.ani:hover #aniclock {
+  animation: rot 1s linear infinite;
+}
+.ani:hover #aniclock1 {
+  animation: rot 2s linear infinite reverse;
+}
+#aniclock {
+  color: rgb(255, 255, 255);
+  animation: rot 3s linear infinite;
+  font-size: 40px;
+}
+#aniclock1 {
+  color: rgb(255, 70, 70);
+  animation: rot 5s linear infinite reverse;
+  font-size: 60px;
+}
+@keyframes rot {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*end head info*/
+#main-vector {
+  width: 11rem;
+}
+section {
+  border-radius: 10px;
+  margin: 10px 5px 30px 5px;
+  padding: 10px;
+  background: white;
+  box-shadow: 0px 0px 5px -1px rgb(185, 185, 185);
+}
+.table {
+  overflow-x: auto;
+}
+.tbl {
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid rgb(219, 219, 219);
+  width: 100%;
+}
+.tbl #header {
+  background: rgb(235, 235, 235);
+  padding: 15px 0;
+  color: rgb(61, 61, 61);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.tbl td {
+  padding: 4px 8px;
+}
+#with-edit,
+#with-del {
+  background: rgb(180, 180, 180);
+  color: white;
+  width: 4rem;
+  padding: 4px;
+  border: none;
+  opacity: 0.5;
+  transition: 0.3s;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+#with-del {
+  background: rgb(160, 0, 0);
+}
+#with-edit:hover,
+#with-del:hover {
+  opacity: 1;
+}
+.btn-add {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#with-add {
+  background: rgba(255, 70, 70, 0.8);
+  width: 10rem;
+  color: white;
+  margin: 20px 0 10px 0;
+  border-radius: 10px;
+  padding: 5px 10px;
+  height: 3rem;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#with-add:hover {
+  background: white;
+  color: rgb(255, 70, 70);
+  box-shadow: 0px 0px 5px -1px rgb(93, 93, 93);
+}
+#color-header {
+  background: rgb(255, 237, 237);
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 5rem;
+  width: 100%;
+  padding: 5px;
+  margin-top: 40px;
+  background: rgb(200, 200, 200);
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer #img-footer {
+  width: 1.5rem;
+  margin: 0 3px;
+}
+
+/*modal add release time and rank*/
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.657);
+  padding-top: 10px;
+}
+.modal-content {
+  background: rgb(255, 255, 255);
+  margin: 10% 34% 2% auto;
+  border: 1px solid #888;
+  width: 25%;
+  padding: 10px;
+  border-radius: 10px;
+  animation: appear 0.3s linear;
+}
+.modal-content .content {
+  width: 100%;
+  padding: 5px;
+  margin: 10px 0 10px 0;
+}
+.content .text-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+#lbl-with {
+  margin: 5px 0;
+  background-color: rgb(235, 235, 235);
+  text-align: center;
+}
+.text-content input[type="number"],
+.text-content select {
+  width: 5rem;
+  padding: 2px 5px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-color: rgb(160, 0, 0);
+  outline: none;
+}
+.text-content select {
+  width: 10rem;
+  background: rgb(140, 0, 0);
+  color: white;
+  border: none;
+}
+.modal-content h2 {
+  color: rgb(140, 0, 0);
+}
+.matrix-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(228, 228, 228);
+}
+.matrix-button button {
+  width: 5rem;
+  padding: 5px;
+  margin: 0 5px;
+  opacity: 0.5;
+  border-radius: 10px;
+  transition: 0.3s;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.matrix-button button:hover {
+  opacity: 1;
+}
+.matrix-button #cancel {
+  border: none;
+  background: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  transition: 0.3s;
+}
+.matrix-button #submit {
+  border: none;
+  background: rgb(255, 0, 0);
+  color: white;
+  transition: 0.3s;
+}
+
+/*for proffesor*/
+.modal-container #prof {
+  display: none;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  20% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: translateY(-80px);
+  }
+}
+@media screen and (width: 768px) {
+  main {
+    width: 100%;
+  }
+  .modal-content {
+    width: 80%;
+    margin: 10% 10% 2% auto;
+  }
+  .modal-container {
+    padding-top: 50px;
+  }
+  .tbl {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .modal-content {
+    width: 80%;
+    margin: 10% 10% 2% auto;
+  }
+  .modal-container {
+    padding-top: 50px;
+  }
+  .tbl {
+    width: 900px;
+  }
+}
